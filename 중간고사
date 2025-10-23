@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>카운터</title>
+  <style>
+    body {
+      background-color: #2c6ed5; /* 파란색 배경 */
+      color: white;              /* 흰색 글씨 */
+      font-family: 'Courier New', monospace; /* 레트로 느낌 */
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 0px black;
+    }
+
+    #count {
+      font-size: 4em;
+      margin: 20px;
+    }
+
+    button {
+      font-size: 1.5em;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: white;
+      color: #2c6ed5;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #dfe8ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>카운터</h1>
+  <div id="count">0</div>
+  <button id="increase">증가</button>
+  <button id="reset">리셋</button>
+
+  <script>
+    let count = 0;
+    const countDisplay = document.getElementById("count");
+    const increaseBtn = document.getElementById("increase");
+    const resetBtn = document.getElementById("reset");
+
+    increaseBtn.addEventListener("click", function() {
+      count++;
+      countDisplay.textContent = count;
+    });
+
+    resetBtn.addEventListener("click", function() {
+      count = 0;
+      countDisplay.textContent = count;
+    });
+  </script>
+</body>
+</html>
